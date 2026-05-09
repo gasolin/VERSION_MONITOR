@@ -39,15 +39,16 @@
       pageDescription.textContent = settings.description;
     }
 
-    const packages = settings.packages || [];
+    const categories = settings.categories || [];
+    let totalPackages = 0;
 
-    if (packages.length === 0) {
+    if (categories.length === 0) {
       statusText.textContent = 'NO PACKAGES DEFINED';
       statusText.className = 'nes-text is-warning';
       tbody.innerHTML = `
         <tr>
           <td colspan="2" class="nes-text is-disabled">
-            Add packages to settings.json to get started.
+            Add categories and packages to settings.json to get started.
           </td>
         </tr>
       `;
@@ -56,39 +57,56 @@
 
     // Render table rows
     tbody.innerHTML = '';
-    packages.forEach((pkg, index) => {
-      const tr = document.createElement('tr');
-      tr.style.animationDelay = `${index * 0.1}s`;
-      tr.classList.add('fade-in-row');
+    let globalIndex = 0;
 
-      const npmUrl = `https://www.npmjs.com/package/${pkg.npmPackage}`;
-      const badgeUrl = `https://img.shields.io/npm/v/${pkg.npmPackage}?style=flat-square&color=ff6e00`;
-
-      tr.innerHTML = `
-        <td>
-          <a href="${npmUrl}" target="_blank" rel="noopener noreferrer"
-             class="project-link" id="pkg-link-${index}">
-            ${pkg.name}
-          </a>
-        </td>
-        <td>
-          <a href="${npmUrl}" target="_blank" rel="noopener noreferrer">
-            <img src="${badgeUrl}"
-                 alt="NPM Version of ${pkg.npmPackage}"
-                 class="version-badge"
-                 id="pkg-badge-${index}"
-                 loading="lazy">
-          </a>
+    categories.forEach(category => {
+      // Add category header
+      const headerTr = document.createElement('tr');
+      headerTr.innerHTML = `
+        <td colspan="2" style="background-color: #333; color: #f7d51d; font-family: 'Press Start 2P', cursive; font-size: 10px; padding: 12px 16px;">
+          ${category.name}
         </td>
       `;
+      tbody.appendChild(headerTr);
 
-      tbody.appendChild(tr);
+      const packages = category.packages || [];
+      totalPackages += packages.length;
+
+      packages.forEach(pkg => {
+        const tr = document.createElement('tr');
+        tr.style.animationDelay = `${globalIndex * 0.1}s`;
+        tr.classList.add('fade-in-row');
+
+        const npmUrl = `https://www.npmjs.com/package/${pkg.npmPackage}`;
+        const badgeUrl = `https://img.shields.io/npm/v/${pkg.npmPackage}?style=flat-square&color=ff6e00`;
+
+        tr.innerHTML = `
+          <td>
+            <a href="${npmUrl}" target="_blank" rel="noopener noreferrer"
+               class="project-link" id="pkg-link-${globalIndex}">
+              ${pkg.name}
+            </a>
+          </td>
+          <td>
+            <a href="${npmUrl}" target="_blank" rel="noopener noreferrer">
+              <img src="${badgeUrl}"
+                   alt="NPM Version of ${pkg.npmPackage}"
+                   class="version-badge"
+                   id="pkg-badge-${globalIndex}"
+                   loading="lazy">
+            </a>
+          </td>
+        `;
+
+        tbody.appendChild(tr);
+        globalIndex++;
+      });
     });
 
     // Update status
     statusText.textContent = 'ALL SYSTEMS GO';
     statusText.className = 'nes-text is-success';
-    packageCount.textContent = `[ ${packages.length} package${packages.length > 1 ? 's' : ''} tracked ]`;
+    packageCount.textContent = `[ ${totalPackages} package${totalPackages > 1 ? 's' : ''} tracked ]`;
 
   } catch (err) {
     console.error('Error loading settings:', err);

@@ -25,10 +25,15 @@ The aesthetic is powered by the 8-bit [NES.css](https://nostalgic-css.github.io/
    {
      "title": "NPM Version Monitor",
      "description": "Track the latest versions of your npm packages",
-     "packages": [
+     "categories": [
        {
-         "name": "Package Display Name",
-         "npmPackage": "actual-npm-package-name"
+         "name": "Category Name",
+         "packages": [
+           {
+             "name": "Package Display Name",
+             "npmPackage": "actual-npm-package-name"
+           }
+         ]
        }
      ]
    }
@@ -44,7 +49,7 @@ The aesthetic is powered by the 8-bit [NES.css](https://nostalgic-css.github.io/
 - **Styling**: [NES.css](https://nostalgic-css.github.io/NES.css/)
 - **Badges**: [Shields.io](https://shields.io/)
 - **Fonts**: Google Fonts (Press Start 2P)
-- **AI Assistance**: Built with the help of **Antigravity** (Google DeepMind) 🚀
+- **AI Assistance**: Built with the help of **Antigravity** 🚀
 
 ## License
 
