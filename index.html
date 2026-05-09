@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NPM Version Monitor - Track the latest versions of your npm packages with retro NES-style badges">
+  <title>NPM Version Monitor</title>
+
+  <!-- NES.css -->
+  <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+  <!-- Press Start 2P font -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="nes-container is-dark with-title">
+        <p class="title">NPM Monitor</p>
+        <div class="header-content">
+          <i class="nes-icon trophy is-large"></i>
+          <div>
+            <h1 id="page-title">NPM Version Monitor</h1>
+            <p id="page-description" class="header-desc">Track the latest versions of your npm packages</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Status Bar -->
+    <section class="status-bar">
+      <div class="nes-container is-rounded">
+        <span class="nes-text is-primary">
+          <i class="nes-icon heart is-small"></i>
+          STATUS:
+        </span>
+        <span id="status-text" class="nes-text is-success">LOADING...</span>
+        <span class="nes-text is-disabled" id="package-count"></span>
+      </div>
+    </section>
+
+    <!-- Package Table -->
+    <section class="table-section">
+      <div class="nes-container with-title is-centered">
+        <p class="title">Packages</p>
+        <div class="nes-table-responsive">
+          <table class="nes-table is-bordered" id="package-table">
+            <thead>
+              <tr>
+                <th>Project</th>
+                <th>Version</th>
+              </tr>
+            </thead>
+            <tbody id="package-tbody">
+              <!-- Rows populated by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="nes-container is-dark is-centered">
+        <p>
+          <i class="nes-icon star is-small"></i>
+          Powered by
+          <a href="https://shields.io" target="_blank" rel="noopener noreferrer" class="nes-text is-primary">shields.io</a>
+          &amp; styled with
+          <a href="https://nostalgic-css.github.io/NES.css/" target="_blank" rel="noopener noreferrer" class="nes-text is-warning">NES.css</a>
+          <i class="nes-icon star is-small"></i>
+        </p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

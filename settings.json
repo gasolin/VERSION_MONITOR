@@ -1,0 +1,50 @@
+{
+  "title": "NPM Version Monitor",
+  "description": "Track the latest versions of your npm packages",
+  "packages": [
+    {
+      "name": "expo",
+      "npmPackage": "expo"
+    },
+    {
+      "name": "react-native",
+      "npmPackage": "react-native"
+    },
+    {
+      "name": "@tetherto/wdk",
+      "npmPackage": "@tetherto/wdk"
+    },
+    {
+      "name": "@tetherto/wdk-backup-cloud-react-native",
+      "npmPackage": "@tetherto/wdk-backup-cloud-react-native"
+    },
+    {
+      "name": "@tetherto/wdk-pricing-bitfinex-http",
+      "npmPackage": "@tetherto/wdk-pricing-bitfinex-http"
+    },
+    {
+      "name": "@tetherto/wdk-pricing-provider",
+      "npmPackage": "@tetherto/wdk-pricing-provider"
+    },
+    {
+      "name": "@tetherto/wdk-react-native-core",
+      "npmPackage": "@tetherto/wdk-react-native-core"
+    },
+    {
+      "name": "@tetherto/wdk-utils",
+      "npmPackage": "@tetherto/wdk-utils"
+    },
+    {
+      "name": "@tetherto/wdk-wallet-btc",
+      "npmPackage": "@tetherto/wdk-wallet-btc"
+    },
+    {
+      "name": "@tetherto/wdk-wallet-evm-erc-4337",
+      "npmPackage": "@tetherto/wdk-wallet-evm-erc-4337"
+    },
+    {
+      "name": "@tetherto/wdk-wallet-spark",
+      "npmPackage": "@tetherto/wdk-wallet-spark"
+    }
+  ]
+}

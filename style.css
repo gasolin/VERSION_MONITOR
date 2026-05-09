@@ -1,0 +1,258 @@
+/* ===========================
+   NPM Version Monitor - Style
+   NES.css themed layout
+   =========================== */
+
+/* Reset & base */
+html, body, pre, code, kbd, samp {
+  font-family: "Press Start 2P", cursive;
+}
+
+body {
+  background-color: #212529;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Scanline overlay for retro CRT feel */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.08) 0px,
+    rgba(0, 0, 0, 0.08) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  z-index: 9999;
+}
+
+/* Layout container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+/* Header */
+.header {
+  margin-bottom: 24px;
+  animation: slideDown 0.6s ease-out;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-content h1 {
+  font-size: 14px;
+  margin: 0 0 12px 0;
+  line-height: 1.6;
+}
+
+.header-desc {
+  font-size: 10px;
+  color: #92cc41;
+  margin: 0;
+}
+
+/* Status Bar */
+.status-bar {
+  margin-bottom: 24px;
+  animation: slideDown 0.8s ease-out;
+}
+
+.status-bar .nes-container {
+  background: #212529;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 10px;
+}
+
+/* Table Section */
+.table-section {
+  margin-bottom: 24px;
+  animation: slideDown 1s ease-out;
+}
+
+.table-section .nes-container {
+  background: #212529;
+}
+
+.table-section .nes-container.with-title > .title {
+  background-color: #212529;
+  color: #92cc41;
+}
+
+.nes-table-responsive {
+  overflow-x: auto;
+  width: 100%;
+}
+
+/* Table styling */
+.nes-table {
+  width: 100%;
+  background: #212529;
+  color: #fff;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.nes-table th {
+  background: #333;
+  color: #f7d51d;
+  font-size: 14px;
+  padding: 6px 12px;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.nes-table td {
+  padding: 4px 12px;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.nes-table tr {
+  border-color: #444;
+}
+
+.nes-table tbody tr:hover {
+  background: rgba(146, 204, 65, 0.1);
+  transition: background 0.2s ease;
+}
+
+/* Project link in table */
+.project-link {
+  color: #209cee;
+  text-decoration: none;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+}
+
+.project-link:hover {
+  color: #92cc41;
+}
+
+.project-label {
+  color: #888;
+  font-size: 9px;
+  margin-left: 4px;
+}
+
+/* Badge images */
+.version-badge {
+  height: 22px;
+  image-rendering: auto;
+  transition: transform 0.2s ease;
+}
+
+.version-badge:hover {
+  transform: scale(1.15);
+}
+
+/* Loading skeleton row */
+.skeleton-cell {
+  display: inline-block;
+  width: 120px;
+  height: 20px;
+  background: linear-gradient(
+    90deg,
+    #333 25%,
+    #444 50%,
+    #333 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 2px;
+}
+
+/* Footer */
+.footer {
+  animation: slideDown 1.2s ease-out;
+}
+
+.footer .nes-container {
+  font-size: 9px;
+  line-height: 2;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Pixel-art cursor blink for status */
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-content h1 {
+    font-size: 11px;
+  }
+
+  .header-desc {
+    font-size: 8px;
+  }
+
+  .nes-table th,
+  .nes-table td {
+    padding: 8px;
+    font-size: 9px;
+  }
+
+  .status-bar .nes-container {
+    font-size: 8px;
+  }
+
+  .version-badge {
+    height: 18px;
+  }
+}
