@@ -12,6 +12,10 @@
         {
           "name": "react-native",
           "npmPackage": "react-native"
+        },
+        {
+          "name": "react-native-bare-kit",
+          "npmPackage": "react-native-bare-kit"
         }
       ]
     },
