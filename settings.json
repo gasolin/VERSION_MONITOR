@@ -55,6 +55,10 @@
           "npmPackage": "@tetherto/wdk-wallet-evm-erc-4337"
         },
         {
+          "name": "@tetherto/wdk-protocol-fiat-moonpay",
+          "npmPackage": "@tetherto/wdk-protocol-fiat-moonpay"
+        },
+        {
           "name": "@tetherto/wdk-wallet-spark",
           "npmPackage": "@tetherto/wdk-wallet-spark"
         },
