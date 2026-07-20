@@ -31,12 +31,20 @@
           "npmPackage": "@tetherto/wdk-backup-cloud-react-native"
         },
         {
+          "name": "@tetherto/wdk-p2p-address-book",
+          "npmPackage": "@tetherto/wdk-p2p-address-book"
+        },
+        {
           "name": "@tetherto/wdk-pricing-bitfinex-http",
           "npmPackage": "@tetherto/wdk-pricing-bitfinex-http"
         },
         {
           "name": "@tetherto/wdk-pricing-provider",
           "npmPackage": "@tetherto/wdk-pricing-provider"
+        },
+        {
+          "name": "@tetherto/wdk-protocol-bridge-usdt0-evm",
+          "npmPackage": "@tetherto/wdk-protocol-bridge-usdt0-evm"
         },
         {
           "name": "@tetherto/wdk-react-native-core",
