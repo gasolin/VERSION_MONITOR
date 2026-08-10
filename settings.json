@@ -27,6 +27,14 @@
           "npmPackage": "@tetherto/wdk"
         },
         {
+          "name": "@tetherto/pear-wrk-wdk",
+          "npmPackage": "@tetherto/pear-wrk-wdk"
+        },
+        {
+          "name": "@tetherto/wdk-worklet-bundler",
+          "npmPackage": "@tetherto/wdk-worklet-bundler"
+        },
+        {
           "name": "@tetherto/wdk-backup-cloud-react-native",
           "npmPackage": "@tetherto/wdk-backup-cloud-react-native"
         },
@@ -53,6 +61,10 @@
         {
           "name": "@tetherto/wdk-utils",
           "npmPackage": "@tetherto/wdk-utils"
+        },
+        {
+          "name": "@tetherto/wdk-wallet",
+          "npmPackage": "@tetherto/wdk-wallet"
         },
         {
           "name": "@tetherto/wdk-wallet-btc",
