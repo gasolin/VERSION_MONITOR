@@ -83,6 +83,19 @@
           "npmPackage": "@tetherto/wdk-wallet-tron-gasfree"
         }
       ]
-    }
+    },
+    {
+      "name": "Vendor",
+      "packages": [
+        {
+          "name": "@lifi/wdk-protocol-swidge-lifi",
+          "npmPackage": "@lifi/wdk-protocol-swidge-lifi"
+        },
+        {
+          "name": "@rhino.fi/wdk-protocol-swidge-rhinofi",
+          "npmPackage": "@rhino.fi/wdk-protocol-swidge-rhinofi"
+        }
+      ]
+    },
   ]
 }
