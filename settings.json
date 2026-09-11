@@ -47,6 +47,10 @@
           "npmPackage": "@tetherto/wdk-pricing-bitfinex-http"
         },
         {
+          "name": "@tetherto/wdk-pricing-coingecko-http",
+          "npmPackage": "@tetherto/wdk-pricing-coingecko-http"
+        },
+        {
           "name": "@tetherto/wdk-pricing-provider",
           "npmPackage": "@tetherto/wdk-pricing-provider"
         },
