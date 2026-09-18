@@ -83,6 +83,10 @@
           "npmPackage": "@tetherto/wdk-wallet-spark"
         },
         {
+          "name": "@tetherto/wdk-wallet-solana-gasless",
+          "npmPackage": "@tetherto/wdk-wallet-solana-gasless"
+        },
+        {
           "name": "@tetherto/wdk-wallet-tron-gasfree",
           "npmPackage": "@tetherto/wdk-wallet-tron-gasfree"
         }
